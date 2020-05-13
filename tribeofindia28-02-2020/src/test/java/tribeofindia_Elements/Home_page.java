@@ -76,13 +76,22 @@ public class Home_page {
 		WebElement about_us = Information.findElement(By.xpath("/html/body/footer/div/div[1]/div[2]/ul/li[4]"));
 	}
 	
-	public static void footer_Corporate (WebDriver driver)
+	public static WebElement corporate_Signin (WebDriver driver)
 	{
 		WebElement footer = driver.findElement(By.xpath("/html/body/footer/div/div[1]"));
 		WebElement corporate = footer.findElement(By.xpath("/html/body/footer/div/div[1]/div[3]"));
-		WebElement sign = corporate.findElement(By.xpath("/html/body/footer/div/div[1]/div[3]/ul/li[1]"));
-		WebElement corporate_request = corporate.findElement(By.xpath("/html/body/footer/div/div[1]/div[3]/ul/li[2]"));
+		WebElement signin = corporate.findElement(By.xpath("/html/body/footer/div/div[1]/div[3]/ul/li[1]"));
+		return signin;
 	}
+	
+	public static WebElement corporate_corporate_request (WebDriver driver)
+	{
+		WebElement footer = driver.findElement(By.xpath("/html/body/footer/div/div[1]"));
+		WebElement corporate = footer.findElement(By.xpath("/html/body/footer/div/div[1]/div[3]"));
+		WebElement corporate_request = corporate.findElement(By.xpath("/html/body/footer/div/div[1]/div[3]/ul/li[2]"));
+		return corporate_request;
+	}
+	
 	
 	public static void footer_Social(WebDriver driver)
 	{
